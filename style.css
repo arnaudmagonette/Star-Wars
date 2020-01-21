@@ -1,0 +1,132 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background: #000;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+body {
+    background: url(images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.container {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+@keyframes intro{
+    20%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+    }
+}
+
+.intro {
+    color:#0c7485;
+    font-size: 89px;
+    font-weight: 100;
+    opacity: 0;
+    position: relative;
+    animation: intro 5s ;
+}
+
+@keyframes logo{
+    from{
+        opacity: 1;
+        transform: scale(3);
+    }
+    to{
+        transform: scale(0);
+        opacity: 1;
+    }
+}
+
+.image {
+    position: absolute;
+    opacity: 0;
+    animation: logo 8s 6s;
+}
+
+@keyframes crawl{
+    0% {
+        top: 700px;
+        transform: rotateX(40deg) translateZ(0);
+        transform-origin: 50% 0%;
+    }
+    100% { 
+        top: -13000px;
+        transform: rotateX(50deg) translateZ(-8500px);
+        transform-origin: 50% 35%;
+    }
+}
+
+.crawl{
+    color: #ffbb0b;
+    position: absolute;
+    font-size: 500%;
+    top: 9999px;
+    animation: crawl 60s 8s linear;
+    perspective: 400px;
+}
+
+.star-wars {
+    position: absolute;
+    height: 270px;
+    width: 100%;
+    perspective: 800px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 500%;
+    text-align: justify;
+}
+
+.star-wars h1, 
+.star-wars h2 {
+    line-height: normal;
+    text-align: center;
+}
+
+.star-wars h1 {
+    text-transform: uppercase;
+}
+
+@keyframes fade {
+    20%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.fade {
+    background: linear-gradient(rgb(0, 0, 0) 20%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    z-index: 2;
+    opacity: 0;
+    animation: fade 70s 10s ease-in;
+}
